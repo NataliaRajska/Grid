@@ -1,4 +1,4 @@
-Introduction to Grids
+# Introduction to Grids
 Using CSS, you can elegantly lay out elements on a web page. There is no simple answer for how best to do this — depending on what content you are trying to display, multiple different techniques can work well. Codecademy’s lessons on the box model and CSS display and positioning properties explain some possible ways to approach layout.
 
 In this lesson, we introduce a new, powerful tool called CSS Grid. The grid can be used to lay out entire web pages. Whereas Flexbox is mostly useful for positioning items in a one-dimensional layout, CSS grid is most useful for two-dimensional layouts, providing many tools for aligning and moving elements across both rows and columns.
@@ -175,3 +175,92 @@ In all of our examples, the items placed in the grid have always taken up exactl
 In the following exercises, you will learn CSS properties that will affect the size of the grid items and where they are displayed on the page. By manipulating both the parent and the child elements, we can create beautiful layouts with ease.
 
 Let’s start exploring grid items!
+
+![url text](https://github.com/NataliaRajska/Grid/blob/main/resources/css_grid_diagram_2.svg)
+
+## Multiple Row Items
+
+Using the CSS properties grid-row-start and grid-row-end, we can make single grid items take up multiple rows. Remember, we are no longer applying CSS to the outer grid container; we’re adding CSS to the elements sitting inside the grid!
+```
+.item {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+```
+In this example, the HTML element of class item will take up two rows in the grid, rows 1 and 2. The values that grid-row-start and grid-row-end accept are grid lines.
+
+Row grid lines and column grid lines start at 1 and end at a value that is 1 greater than the number of rows or columns the grid has. For example, if a grid has 5 rows, the grid row lines range from 1 to 6. If a grid has 8 rows, the grid row lines range from 1 to 9.
+
+The value for grid-row-start should be the row at which you want the grid item to begin. The value for grid-row-end should be one greater than the row at which you want the grid item to end. An element that covers rows 2, 3, and 4 should have these declarations: grid-row-start: 2 and grid-row-end: 5.
+
+It is possible for the value of grid-row-start to be greater than that of grid-row-end. Both properties can also each have negative values. Consult the documentation to learn more about how to use these features.
+
+## Grid Row
+We can use the property grid-row as shorthand for grid-row-start and grid-row-end. The following two code blocks will produce the same output:
+```
+.item {
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
+.item {
+  grid-row: 4 / 6;
+}
+```
+This code should look similar to the way grid-template is shorthand for grid-template-rowsand grid-template-columns. In this case, the starting row goes before the “/“ and the ending row goes after it. Again, the ending row is exclusive; this grid item will occupy rows four and five.
+
+When an item spans multiple rows or columns using these properties, it will also include the grid-gap if any exists. For example, if an item spans two rows of height 100 pixels and there is a ten-pixel grid-gap, then the item will have a total height of 210 pixels.
+
+## Grid Column
+The previous three properties also exist for columns. grid-column-start, grid-column-end and grid-column work identically to the row properties. These properties allow a grid item to span multiple columns.
+
+When using these properties, we can use the keyword span to start or end a column or row relative to its other end. Look at how span is used in the code below:
+```
+.item {
+  grid-column: 4 / span 2;
+}
+This is telling the item element to begin in column four and take up two columns of space. So item would occupy columns four and five. It produces the same result as the following code blocks:
+
+.item {
+  grid-column: 4 / 6;
+}
+.item {
+  grid-column-start: 4;
+  grid-column-end: span 2;
+}
+.item {
+  grid-column-start: span 2;
+  grid-column-end: 6;
+}
+```
+**span** is a useful keyword, because it avoids off-by-one errors (miscalculating the ending grid line) you might make when determining the ending grid line of an element. If you know where you want your grid item to start and how long it should be, use span!
+
+## Grid Area
+
+We’ve already been able to use grid-row and grid-column as shorthand for properties like grid-row-start and grid-row-end. We can refactor even more using the property grid-area. This property will set the starting and ending positions for both the rows and columns of an item.
+```
+.item {
+  grid-area: 2 / 3 / 4 / span 5;
+}
+```
+grid-area takes four values separated by slashes. The order is important! This is how grid-area will interpret those values.
+
+1. grid-row-start
+2. grid-column-start
+3. grid-row-end
+4. grid-column-end
+
+In the above example, the item will occupy rows two and three and columns three through eight.
+Using grid-area is an easy way to place items exactly where you want them in a grid.
+
+#Review
+At this point, we’ve covered a great deal of different ways to manipulate the grid and the items inside it to create interesting layouts.
+
++ grid-template-columns defines the number and sizes of the columns of the gridv
++ grid-template-rows defines the number and sizes of the rows of the grid
++ grid-template is a shorthand for defining both grid-template-columns and grid-template-rows in one line
++ grid-gap puts blank space between rows and/or columns of the grid
++ grid-row-start and grid-row-end makes elements span certain rows of the grid
++ grid-column-start and grid-column-end makes elements span certain columns of the grid
++ grid-area is a shorthand for grid-row-start, grid-column-start, grid-row-end, and grid-column-end, all in one line
+
+You have seen how to set up and fill in a grid and you now have one more CSS positioning technique to add to your toolkit! Let’s do some practice to solidify these skills.
