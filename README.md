@@ -17,6 +17,7 @@ Let’s explore the different parts of a grid system and discuss how it can help
 Various types of grids exist and are used within all types of visual design. With the creation of the printing press, bookmakers developed a manuscript-style grid, or a block grid, to bring structure to text on pages. Within news design, the column grid allowed publishers to break the page apart into sections to emphasize different pieces of content.
 
 Similar to news design, the most common type of grid a web designer will use is the column grid. The column grid breaks up a page into vertical units that span the width of the content, and this grid structure can dictate how elements are laid out with precision and elegance.
+![alt text](https://github.com/NataliaRajska/Grid/blob/main/resources/12grid.svg)
 
 ## Grid Anatomy
 When designing a website, the grid comprises three major components: columns, gutters, and margins.
@@ -28,6 +29,7 @@ Next, a gutter is the negative space between each column. Gutters help in ensuri
 Margins appear on the left and right sides of the column-based grid. These ensure the content of your designs doesn’t match up to the edges of the browser window.
 
 It’s important to note, margins may vary depending on the width of the grid, browser window, or device. For larger displays, margins may be very noticeable while on smaller screens, they may have the same width as a gutter.
+![alt text](https://github.com/NataliaRajska/Grid/blob/main/resources/css_grid_diagram_3.svg)
 
 ## Grid Columns
 
@@ -49,6 +51,7 @@ For example, let’s say you have a set of items that all span the same amount o
 Again, remember that a row can be used to force content away from an area that has remaining columns not used. What does this mean? Great question.
 
 Let’s say our design uses a 12 column grid and we want one element to span seven columns. That means we still have five unfilled columns to either the left or the right side. Naturally, any new content added to our document will try and fill this unused space. However, by placing a row element around our component that spans 7 columns we can force any new content to start beneath our component and leave the remaining 5 columns empty.
+![url text](https://github.com/NataliaRajska/Grid/blob/main/resources/CSS_diagram_4_v1.svg)
 
 ## Grid Gutters
 Gutters make up the negative space between columns. This design element helps to provide a natural break between elements aligned horizontally, while also helping to break rows of content vertically.
@@ -69,6 +72,8 @@ Consider your mobile, tablet and desktop devices. Now think about their viewable
 
 As a designer, responsive grid design enables you to maximize the content on the screen, ensuring a more accessible experience for users. Additionally, your design elements will have sufficient space to breath and content can naturally flow across the page.
 
+![url text](https://github.com/NataliaRajska/Grid/blob/main/resources/css%20diagram%205.jpg)
+
 ## Whitespace
 
 Space is an important aspect of creating balanced and harmonious layouts in web design. As a designer, it’s important to understand how space can enhance as well as hurt your designs.
@@ -80,6 +85,8 @@ Let’s explore some examples of good whitespace. If you look at the examples in
 In the example on the right, you’ll notice that too much whitespace can negatively impact the flow of your site. By including too much spacing in between elements, it can cause issues for users trying to navigate seamlessly through the content.
 
 Whitespace is broken up into passive and active, which we’ll explore in the next two exercises!
+
+![url text](https://github.com/NataliaRajska/Grid/blob/main/resources/Css_objective8_final_image_v2.jpg)
 
 ## Passive Whitespace
 
@@ -93,6 +100,9 @@ If a site’s text is too tight or lacks sufficient margin below headings and pa
 
 Finding a healthy balance between text that lacks sufficient spacing and text that has too much is an important task for designers.
 
+![url text](https://github.com/NataliaRajska/Grid/blob/main/resources/css%20diagram%206.svg)
+
+
 ## Active Whitespace
 Unlike passive whitespace, which occurs more naturally, active whitespace is intentional. Also called macro whitespace, active whitespace refers to enhancing the overall page structure through space to emphasize content or guide users from one point to the next.
 
@@ -101,6 +111,7 @@ By adding active whitespace to a site’s design, we can spread our different se
 Active whitespace comes in many forms. But traditionally, it is achieved by adding space between a site’s elements. For instance, adding space to an articles sidebar helps to visually separate the content from the page’s main content.
 
 Additionally, this type of whitespace allows readers to quickly understand what they should be focusing on versus what is just supplementary details.
+![url text](https://github.com/NataliaRajska/Grid/blob/main/resources/css%20diagram%207.jpg)
 
 ## Review
 
