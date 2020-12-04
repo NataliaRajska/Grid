@@ -10,6 +10,8 @@ Grids can also promote consistency, allowing you to build repeated patterns to c
 
 Let’s explore the different parts of a grid system and discuss how it can help enhance your designs with consistency, alignment, and spacing.
 
+![alt text](https://github.com/NataliaRajska/Grid/blob/main/resources/website-grid.jpg)
+
 ## Grid Types
 
 Various types of grids exist and are used within all types of visual design. With the creation of the printing press, bookmakers developed a manuscript-style grid, or a block grid, to bring structure to text on pages. Within news design, the column grid allowed publishers to break the page apart into sections to emphasize different pieces of content.
